@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши Воспоминания❤️</title>
+    <meta name="description" content="Наши прекрасные моменты вместе ❤️">
+    
+    <!-- Open Graph / Facebook, Telegram, Viber, WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Наши Воспоминания">
+    <meta property="og:description" content="Наши прекрасные моменты вместе ❤️">
+    <meta property="og:image" content="img/og-preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Наши Воспоминания">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Наши Воспоминания">
+    <meta name="twitter:description" content="Наши прекрасные моменты вместе ❤️">
+    <meta name="twitter:image" content="img/og-preview.png">
+    
+    <!-- Дополнительные теги для мессенджеров -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <link rel="icon" type="image/svg+xml" href="img/favicon-os.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">🌸</div>
+        <div class="snowflake">💕</div>
+        <div class="snowflake">🌷</div>
+        <div class="snowflake">❤️</div>
+        <div class="snowflake">🌸</div>
+        <div class="snowflake">💖</div>
+        <div class="snowflake">🌺</div>
+        <div class="snowflake">💕</div>
+        <div class="snowflake">🌸</div>
+        <div class="snowflake">❤️</div>
+        <div class="snowflake">🌷</div>
+        <div class="snowflake">💖</div>
+    </div>
+
+    <!-- Счётчик времени вместе -->
+    <div class="together-counter">
+        <span class="together-counter__label">Друг друга бесим уже:</span>
+        <div class="together-counter__wrap">
+            <span class="together-counter__value" id="togetherCounter" aria-live="polite">—</span>
+            <span class="together-counter__heart" aria-hidden="true">❤️</span>
+        </div>
+    </div>
+
+    <!-- Экран входа (отключён — контент открыт сразу) -->
+    <div class="entry-screen hidden" id="entryScreen" aria-hidden="true">
+        <div class="hearts-container">
+            <div class="heart-item" data-index="1">❤️</div>
+            <div class="heart-item" data-index="2">💖</div>
+            <div class="heart-item" data-index="3">💕</div>
+            <div class="heart-item" data-index="4">💗</div>
+        </div>
+        <div class="entry-error" id="entryError"></div>
+    </div>
+
+    <!-- Заголовок -->
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Наши Воспоминания</h1>
+        </div>
+    </header>
+
+    <!-- Галерея -->
+    <main class="main">
+        <div class="container">
+            <div class="gallery" id="gallery">
+                <!-- Фотографии будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox для полноэкранного просмотра -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">
+            <img src="img/left-arrow.svg" alt="Previous" class="lightbox-arrow-icon">
+        </button>
+        <button class="lightbox-next" id="lightboxNext">
+            <img src="img/right-arrow.svg" alt="Next" class="lightbox-arrow-icon">
+        </button>
+        <div class="lightbox-image" id="lightboxImage"></div>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <!-- Причины для любви — карусель -->
+    <section class="love-reasons" aria-label="Причины для любви">
+        <div class="love-reasons__container">
+            <h2 class="love-reasons__title">Причины для любви</h2>
+            <div class="love-reasons__slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда ты считаешь её красивее любого ювелирного изделия в своём шопе.</span>
+                                <img src="img/love-reason-1.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда вы оба планируете захватить мир, но пока спорите, чья очередь мыть посуду.</span>
+                                <img src="img/love-reason-2.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда она единственный человек, который дослушал твой демку до конца и не попросила «сделать потише».</span>
+                                <img src="img/love-reason-3.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда она фоткается с твоей новой подвеской, и охваты взлетают выше, чем твои амбиции.</span>
+                                <img src="img/love-reason-4.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это планировать захват рынка украшений, пока вы оба лежите в масках для лица.</span>
+                                <img src="img/love-reason-5.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда вы — самая стильная пара в сторис, даже если за кадром гора неглаженного белья.</span>
+                                <img src="img/love-reason-6.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это вместе мечтать о пентхаусе, но кайфовать здесь и сейчас в одной съёмной, но уютной квартире.</span>
+                                <img src="img/love-reason-7.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это верить в его успех сильнее, чем в него верит алгоритм Инстаграма.</span>
+                                <img src="img/love-reason-8.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это когда «мы» в бизнес-плане важнее, чем «я».</span>
+                                <img src="img/love-reason-9.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="love-reasons__card">
+                                <span class="love-reasons__card-text">Любовь — это знать, что даже если мир перестанет качать под бит, вы всё равно будете на одной волне.</span>
+                                <img src="img/love-reason-10.svg" alt="" class="love-reasons__card-icon" width="64" height="64">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блокнот благодарности -->
+    <section class="gratitude-notebook" aria-label="Блокнот благодарности">
+        <div class="container">
+            <h2 class="gratitude-notebook__title">Блокнот благодарности</h2>
+            <p class="gratitude-notebook__desc">Напиши, за что благодарен или благодарна — и сохрани в нашу общую книгу.</p>
+            <form class="gratitude-notebook__form" id="gratitudeForm" action="#" method="post"
+                data-api-base="https://derbugov.ru/love/api"
+                data-project="sergey-olya">
+                <textarea class="gratitude-notebook__textarea" name="message" placeholder="Напиши благодарность..." rows="4" maxlength="2000" required></textarea>
+                <div class="gratitude-notebook__row">
+                    <fieldset class="gratitude-notebook__author">
+                        <legend class="gratitude-notebook__legend">От кого:</legend>
+                        <label class="gratitude-notebook__label">
+                            <input type="radio" name="author" value="sergey" checked>
+                            <span>Сергей</span>
+                        </label>
+                        <label class="gratitude-notebook__label">
+                            <input type="radio" name="author" value="olya">
+                            <span>Оля</span>
+                        </label>
+                    </fieldset>
+                    <button type="submit" class="gratitude-notebook__submit">Сохранить</button>
+                </div>
+                <p class="gratitude-notebook__status" id="gratitudeStatus" aria-live="polite"></p>
+            </form>
+            <div class="gratitude-list" id="gratitudeList">
+                <h3 class="gratitude-list__title">Добавленные благодарности</h3>
+                <div class="gratitude-list__items" id="gratitudeListItems"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Гороскоп пары: Овен + Рыбы -->
+    <section class="horoscope-pair" aria-label="Гороскоп пары">
+        <div class="container">
+            <h2 class="horoscope-pair__title">
+                <span class="horoscope-pair__icon" aria-hidden="true">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z" fill="currentColor" opacity="0.95"/><path d="M5 16l1 3 3-1-1-3-3 1zM19 16l-1 3-3-1 1-3 3 1zM12 18l.8 2.4 2.4-.8-.8-2.4-2.4.8z" fill="currentColor" opacity="0.7"/></svg>
+                </span>
+                Космический коктейль: Овен + Рыбы
+            </h2>
+            <p class="horoscope-pair__subtitle">Встреча «Пионера» и «Мечтателя»</p>
+
+            <div class="horoscope-pair__cards">
+                <div class="horoscope-pair__card horoscope-pair__card--aries">
+                    <span class="horoscope-pair__zodiac" aria-hidden="true">♈</span>
+                    <h3 class="horoscope-pair__name">Сергей <span class="horoscope-pair__sign">Овен</span></h3>
+                    <p class="horoscope-pair__date">8 апреля</p>
+                    <p class="horoscope-pair__text">Огонь в чистом виде. Энергия, драйв и девиз «вижу цель — не вижу препятствий».</p>
+                </div>
+                <div class="horoscope-pair__card horoscope-pair__card--pair">
+                    <span class="horoscope-pair__heart" aria-hidden="true">💫</span>
+                    <p class="horoscope-pair__meta">Сергей даёт защиту и уверенность, Оля — вдохновение и «тихую гавань». Пара замыкает цикл зодиака (Рыбы — последний, Овен — первый), создавая целостность.</p>
+                </div>
+                <div class="horoscope-pair__card horoscope-pair__card--pisces">
+                    <span class="horoscope-pair__zodiac" aria-hidden="true">♓</span>
+                    <h3 class="horoscope-pair__name">Оля <span class="horoscope-pair__sign">Рыбы</span></h3>
+                    <p class="horoscope-pair__date">14 марта</p>
+                    <p class="horoscope-pair__text">Глубокий океан. Мудрость, интуиция и умение сглаживать острые углы.</p>
+                </div>
+            </div>
+
+            <div class="horoscope-pair__footer">
+                <p class="horoscope-pair__date-start">
+                    <span class="horoscope-pair__date-icon" aria-hidden="true">🌙</span>
+                    Начало отношений: <strong>12.09.2025</strong> — Солнце в Деве, Луна в Тельце. Фундамент «на века»: земная устойчивость, комфорт и верность.
+                </p>
+                <p class="horoscope-pair__verdict">
+                    Как моторная лодка (Овен) в красивом заливе (Рыбы). Главное — не заводить мотор слишком резко, и тогда это путешествие будет самым романтичным.
+                </p>
+                <p class="horoscope-pair__numbers">Числа 8 и 14 в сумме дают отличную динамику. 14 марта — День числа Пи, так что у ваших отношений под ногами бесконечная логика любви.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модалка подтверждения удаления -->
+    <div class="confirm-modal" id="confirmModal" aria-modal="true" role="dialog" aria-labelledby="confirmModalText">
+        <div class="confirm-modal__box">
+            <p class="confirm-modal__text" id="confirmModalText">Удалить эту благодарность?</p>
+            <div class="confirm-modal__actions">
+                <button type="button" class="confirm-modal__btn confirm-modal__btn--cancel" id="confirmModalCancel">Отмена</button>
+                <button type="button" class="confirm-modal__btn confirm-modal__btn--delete" id="confirmModalOk">Удалить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

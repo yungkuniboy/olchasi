@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a9e"/>
+      <stop offset="100%" stop-color="#c0435a"/>
+    </linearGradient>
+  </defs>
+  <!-- Фон — круг -->
+  <circle cx="50" cy="50" r="50" fill="url(#bg)"/>
+  <!-- О — полный круг (левая буква) -->
+  <circle cx="35" cy="52" r="17" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <!-- С — дуга, открытая справа (правая буква, слегка перекрывает О) -->
+  <path d="M 76,62 A 17,17 0 1 0 76,42" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <!-- Маленькое сердечко между буквами сверху -->
+  <path d="M 50,28 C 50,25.5 47.5,23.5 46,25 C 44,26.5 46,29 50,32.5 C 54,29 56,26.5 54,25 C 52.5,23.5 50,25.5 50,28 Z" fill="white" opacity="0.95"/>
+</svg>

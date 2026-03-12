@@ -1,0 +1,4 @@
+# CORS для API блокнота (запросы с GitHub Pages и других доменов)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>

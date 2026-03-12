@@ -1464,3 +1464,80 @@ body {
     object-fit: contain;
     pointer-events: none;
 }
+
+/* Мы до и после того, как встретились */
+.we-before-after {
+    position: relative;
+    z-index: 10;
+    padding: 40px 20px 70px;
+}
+
+.we-before-after__before {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 24px;
+}
+
+.we-before-after__item {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.we-before-after__img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    object-fit: cover;
+}
+
+.we-before-after__img--center {
+    width: 100%;
+}
+
+.we-before-after__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5a1a3a;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    margin-bottom: 25px;
+}
+
+.we-before-after__before .we-before-after__item {
+    flex: 0 1 320px;
+}
+
+.we-before-after__after {
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+
+@media (max-width: 992px) {
+    .we-before-after__before .we-before-after__item {
+        flex: 0 1 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .we-before-after {
+        padding: 30px 16px 50px;
+    }
+
+    .we-before-after__before {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .we-before-after__title {
+        font-size: 1.5rem;
+        margin-top: 8px;
+    }
+}

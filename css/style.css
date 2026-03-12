@@ -1469,7 +1469,7 @@ body {
 .we-before-after {
     position: relative;
     z-index: 10;
-    padding: 40px 20px 70px;
+    padding: 130px 20px 70px;
 }
 
 .we-before-after__before {
@@ -1527,7 +1527,7 @@ body {
 
 @media (max-width: 768px) {
     .we-before-after {
-        padding: 30px 0 50px;
+        padding: 90px 0 50px;
     }
 
     .we-before-after__before {
